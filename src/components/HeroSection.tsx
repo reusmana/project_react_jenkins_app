@@ -57,7 +57,7 @@ const HeroSection: React.FC = () => {
         <img
           className="object-contain w-full h-full"
           alt="3D Shape"
-          src="/images/reusmana-new.png"
+          src="/ilustration/undraw_cloudflare-dev_nf79.svg"
         />
       </div>
 

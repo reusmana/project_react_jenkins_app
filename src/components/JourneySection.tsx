@@ -13,7 +13,7 @@ const JourneySectionContent: any = [
     logo: "/images/company/mas.png",
     year: "November 2024 - Present",
     title: "PT Bank Multiarta Sentosa Tbk (Bank MAS)",
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni nostrum tempore vitae unde, labore iure consequuntur nisi sed perspiciatis fuga.`,
+    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Et exercitationem quidem quis corrupti quos velit reprehenderit ullam error quam, quaerat hic tempore architecto, ratione, dolores aperiam enim dolor distinctio. Eos placeat quaerat dolor minima ipsum, pariatur aut tempore exercitationem deleniti, eius neque debitis tempora quis officiis ab sunt minus illum explicabo esse magni. Eum, mollitia. Quos cum eveniet, natus vero maxime, nemo magni, explicabo praesentium molestiae iste exercitationem? Beatae earum, fugiat deserunt enim facere vel rem saepe esse? Assumenda corrupti minus, quas nostrum autem minima voluptates, amet earum voluptatibus pariatur aut impedit deleniti perspiciatis exercitationem iusto tempore veritatis culpa repudiandae optio at dicta ea. Cum sapiente voluptatem, sed quis quae iure assumenda ex dolores inventore minus consequuntur, mollitia eaque ullam placeat? Ex esse soluta quisquam impedit alias praesentium earum eos, sit ipsam, nisi pariatur eius fugiat placeat suscipit? Cum provident consequatur debitis enim aut natus iusto quasi numquam harum a corporis fugit, quas rem, repudiandae necessitatibus quod ab impedit tempore nostrum vel, esse similique placeat dolorum nisi? Praesentium ipsum provident qui deleniti eius ex voluptatum. Quod, accusantium. Quasi nesciunt incidunt aperiam a ex fuga exercitationem corrupti? Eum fugiat aut cupiditate doloribus, autem ipsa debitis itaque consectetur molestiae. Rerum, minima odit.`,
     img: [],
   },
   {
@@ -98,7 +98,7 @@ const JourneySection: React.FC = () => {
         <img
           className="object-contain w-full h-full"
           alt="Character"
-          src="/images/reusmana-new.png"
+          src="/ilustration/undraw_web-search_7oif.svg"
         />
       </div>
 
