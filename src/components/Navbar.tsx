@@ -62,6 +62,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center gap-4">
           <a
             href="/#footer"
+            onClick={(e) => handleNavClick(e, "#footer")}
             className="hidden md:block bg-primary-container text-on-primary-container border-2 border-zinc-900 px-6 py-2 font-bold hover:scale-105 transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none neo-shadow-sm"
           >
             Let's Talk
@@ -106,6 +107,7 @@ const Navbar: React.FC = () => {
           ))}
           <a
             href="/#footer"
+            onClick={(e) => handleNavClick(e, "#footer")}
             className="px-12 py-4 mt-8 text-2xl font-black border-4 bg-primary-container text-on-primary-container border-zinc-900 neo-shadow"
           >
             LET'S TALK
