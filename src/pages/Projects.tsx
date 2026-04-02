@@ -1,8 +1,7 @@
-import React from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-const Projects: React.FC = () => {
+const Projects = () => {
   const allProjects = [
     {
       id: 1,
