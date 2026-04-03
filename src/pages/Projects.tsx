@@ -50,6 +50,21 @@ const Projects = () => {
       img: "/images/araebook.png",
       category: "2024",
     },
+    // {
+    //   id: 7,
+    //   title: "Menata Hati",
+    //   description:
+    //     "Menaata Hati is a web-based platform for purchasing tickets to spiritual enlightenment events that offer moments of self-reflection through themes of Stories, Sharing, Prayers & Self-Reflection with Ustadz Hilman Fauzi. We are here to make it easy for you to discover, choose, and purchase event tickets quickly and conveniently. Through Menaata Hati, you can get closer to meaningful religious gatherings that bring peace to the heart, strengthen your faith, and provide a space for sharing and self-introspection.",
+    //   img: "/images/menata_hati.png",
+    //   category: "2025",
+    // },
+    {
+      id: 7,
+      title: "Custom Odoo",
+      description: "Custom Odoo development for various business needs.",
+      img: "/images/custom_odoo.png",
+      category: "2025",
+    },
   ];
 
   useGSAP(() => {
