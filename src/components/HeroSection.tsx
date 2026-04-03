@@ -70,7 +70,7 @@ const HeroSection: React.FC = () => {
           className="reveal-text font-headline font-black text-[12vw] leading-[0.8] tracking-tighter text-transparent"
           style={{ WebkitTextStroke: "3px #1A1A1A" }}
         >
-          Web Developer
+          Software Developer
         </h1>
 
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none blur-3xl z-[-1]">

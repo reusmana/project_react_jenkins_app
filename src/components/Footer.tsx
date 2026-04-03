@@ -3,8 +3,6 @@ import React, { useState, useEffect } from "react";
 const Footer: React.FC = () => {
   const [time, setTime] = useState(new Date());
   const nightTime = [18, 19, 20, 21, 22, 23, 0, 1, 2, 3, 4, 5];
-  const lightTime = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
-  const [isNight, setIsNight] = useState<boolean>(false);
   const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
   useEffect(() => {
@@ -20,8 +18,6 @@ const Footer: React.FC = () => {
   });
 
   const hourValue = timeString.split(".")[0];
-  // if (nightTime.includes(parseInt(hourValue))) setIsNight(true);
-  // else if (lightTime.includes(parseInt(hourValue))) setIsNight(false);
 
   return (
     <footer
