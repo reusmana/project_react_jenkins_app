@@ -8,14 +8,14 @@ pipeline {
         stage("Builds") {
             steps {
                 echo "Testing Jenkins Pipeline Builds"
-                sh("./npm install")
+                sh("npm install")
                 echo "Testing Jenkins Pipeline Builds ke 2"
             }
         }
         stage("Tests") {
             steps {
                 echo "Testing Jenkins Pipeline Tests"
-                sh("./npm run build")
+                sh("npm run build")
             }
         }
     }
