@@ -7,7 +7,12 @@ pipeline {
     stages {
         stage("Builds") {
             steps {
-                echo "Testing Jenkins Pipeline"
+                echo "Testing Jenkins Pipeline Builds"
+            }
+        }
+        stage("Tests") {
+            steps {
+                echo "Testing Jenkins Pipeline Tests"
             }
         }
     }
