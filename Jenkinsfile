@@ -18,6 +18,15 @@ pipeline {
                 sh("npm run build")
             }
         }
+        stage("Script") {
+            steps {
+                script {
+                    for (int i = 0; i < 5; i++) {
+                        echo "Iteration: ${i}"
+                    }
+                }
+            }
+        }
     }
     post {
         always {
