@@ -29,10 +29,12 @@ pipeline {
         }
         stage("Utils Steps"){
             steps {
-                def data = {
+                def data = [
                     name: "Jenkins Pipeline Utils",
                     version: "1.0.0"
-                }
+
+                ]
+                
                 writeJson(file: "data.json", json: data)
             }
         }
