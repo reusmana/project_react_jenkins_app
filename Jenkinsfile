@@ -8,6 +8,7 @@ pipeline {
         stage("Builds") {
             steps {
                 echo "Testing Jenkins Pipeline Builds"
+                echo "Testing Jenkins Pipeline Builds ke 2"
             }
         }
         stage("Tests") {
