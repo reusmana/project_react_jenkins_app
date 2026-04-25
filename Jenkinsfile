@@ -32,6 +32,16 @@ pipeline {
                 sh('echo $APP_PSW > "rahasia.txt"')
             }
         }
+        stage("Parameters") {
+            steps {
+                echo "Testing Jenkins Pipeline Parameters"
+                echo ("PARAM1: ${params.PARAM1}")
+                echo ("PARAM2: ${params.PARAM2}")
+                echo ("PARAM3: ${params.PARAM3}")
+                echo ("FLAG: ${params.FLAG}")
+                echo ("PARAM4: ${params.PARAM4}")
+            }
+        }
         stage("Builds") {
             steps {
                 echo "Testing Jenkins Pipeline Builds"
