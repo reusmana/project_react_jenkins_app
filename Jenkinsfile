@@ -59,14 +59,16 @@ pipeline {
                                 values 'staging', 'production'
                             }
                         }
-                        exclude {
-                            axis {
-                                name 'NODE_VER'
-                                value '18'
-                            }
-                            axis {
-                                name 'ENV_TYPE'
-                                value 'production'
+                        excludes {
+                            exclude {
+                                axis {
+                                    name 'NODE_VER'
+                                    value '18'
+                                }
+                                axis {
+                                    name 'ENV_TYPE'
+                                    value 'production'
+                                }
                             }
                         }
                         stages {
