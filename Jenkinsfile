@@ -63,11 +63,11 @@ pipeline {
                             exclude {
                                 axis {
                                     name 'NODE_VER'
-                                    value '18'
+                                    values '18'
                                 }
                                 axis {
                                     name 'ENV_TYPE'
-                                    value 'production'
+                                    values 'production'
                                 }
                             }
                         }
