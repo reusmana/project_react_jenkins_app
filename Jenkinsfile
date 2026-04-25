@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        node {
-            label "agent && macos"
-        }
-    }
+    agent any
     stages {
         stage("Builds") {
             steps {
@@ -39,6 +35,17 @@ pipeline {
                     writeJSON file: 'data.json', json: data
                     echo "Data written to data.json"
                 }
+            }
+        }
+
+        stage("Custom Agent"){
+            agent {
+                node {
+                    label "agent && macos"
+                }
+            }
+            steps {
+                echo "This stage runs on a custom agent"
             }
         }
     }
