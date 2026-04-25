@@ -59,20 +59,24 @@ pipeline {
                                 values 'staging', 'production'
                             }
                         }
-                        // exclude {
-                        //     axis {
-                        //         name 'NODE_VER'
-                        //         value '18'
-                        //     }
-                        //     axis {
-                        //         name 'ENV_TYPE'
-                        //         value 'production'
-                        //     }
-                        // }
-                        steps {
-                            echo "Testing Jenkins Pipeline Matrix Build & Test"
-                            echo ("NODE_VER: ${NODE_VER}")
-                            echo ("ENV_TYPE: ${ENV_TYPE}")
+                        exclude {
+                            axis {
+                                name 'NODE_VER'
+                                value '18'
+                            }
+                            axis {
+                                name 'ENV_TYPE'
+                                value 'production'
+                            }
+                        }
+                        stages {
+                            stage("Echo Matrix"){
+                                steps {
+                                    echo "Testing Jenkins Pipeline Matrix Build & Test"
+                                    echo ("NODE_VER: ${NODE_VER}")
+                                    echo ("ENV_TYPE: ${ENV_TYPE}")
+                                }
+                            }
                         }
                     }
                 }
