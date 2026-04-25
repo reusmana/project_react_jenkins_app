@@ -5,6 +5,12 @@ pipeline {
         AUTHOR = "Reusmana Sujani"
         // DESK = "Jenkins Pipeline"
     }
+    options {
+        disableConcurrentBuilds() // mencegah build concurrent
+        timeout(time: 10, unit: 'SECONDS') // mencegah build berjalan terlalu lama, max 10 detik, jika lebih dari itu maka build akan dihentikan
+        // retry(2)
+        // timestamps()
+    }
     stages {
         stage("Initialization") {
             environment {
