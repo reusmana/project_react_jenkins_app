@@ -50,6 +50,14 @@ pipeline {
         }
         stage("Builds") {
             steps {
+                input {
+                    message "Do you want to proceed with the build?"
+                    ok "Yes, proceed!"
+                    submitter "admin" // hanya user dengan username "admin" yang bisa menekan tombol OK
+                    parameters {
+                        string(name: 'BUILD_PARAM', defaultValue: 'Default Build Value', description: 'This is a build parameter')
+                    }
+                }
                 echo "Testing Jenkins Pipeline Builds"
                 sh("npm install")
                 echo "Testing Jenkins Pipeline Builds ke 2"
