@@ -59,16 +59,16 @@ pipeline {
                                 values 'staging', 'production'
                             }
                         }
-                        exclude {
-                            axis {
-                                name 'NODE_VER'
-                                value '18'
-                            }
-                            axis {
-                                name 'ENV_TYPE'
-                                value 'production'
-                            }
-                        }
+                        // exclude {
+                        //     axis {
+                        //         name 'NODE_VER'
+                        //         value '18'
+                        //     }
+                        //     axis {
+                        //         name 'ENV_TYPE'
+                        //         value 'production'
+                        //     }
+                        // }
                         steps {
                             echo "Testing Jenkins Pipeline Matrix Build & Test"
                             echo ("NODE_VER: ${NODE_VER}")
