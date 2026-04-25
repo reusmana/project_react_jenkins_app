@@ -7,6 +7,7 @@ pipeline {
     environment {
         NODE_ENV = "production"
         AUTHOR = "Reusmana Sujani"
+        DESK = "Jenkins Pipeline"
     }
     stages {
         stage("Builds") {
@@ -45,7 +46,6 @@ pipeline {
                 }
             }
         }
-
         stage("Custom Agent"){
             agent {
                 node {
@@ -60,9 +60,9 @@ pipeline {
             }
         }
         stage("Environment Variables"){
-            environment {
-                DESK = "Reusmana Sujani"
-            }
+            // environment {
+            //     DESK = "Reusmana Sujani"
+            // }
             steps {
                 echo "Environment Variables"
                 echo ("NODE_ENV: ${env.NODE_ENV}")
