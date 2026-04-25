@@ -11,6 +11,12 @@ pipeline {
         // retry(2)
         // timestamps()
     }
+    triggers {
+        cron('* * * * *') // menjalankan job setiap menit
+        // cron('H/5 * * * *') // menjalankan job setiap 5 menit
+        // pollSCM('H/5 * * * *') // memeriksa perubahan di SCM setiap 5 menit
+        // githubPush() // memicu build saat ada push ke GitHub
+    }
     parameters {
         string(name: 'PARAM1', defaultValue: 'Default Value', description: 'This is a string parameter')
         text(name: 'PARAM2', defaultValue: 'Default Text', description: 'This is a text parameter')
