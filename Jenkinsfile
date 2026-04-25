@@ -4,6 +4,10 @@ pipeline {
             label "main"
         }
     }
+    environment {
+        NODE_ENV = "production"
+        AUTHOR = "Reusmana Sujani"
+    }
     stages {
         stage("Builds") {
             steps {
@@ -50,9 +54,21 @@ pipeline {
             }
             steps {
                 echo "This stage runs on a custom agent"
+                // Global variables
                 echo ("start job : ${env.JOB_NAME}")
                 echo ("build number : ${env.BUILD_NUMBER}")
                 echo ("build name : ${env.BUILD_NAME}")
+            }
+        }
+        stage("Environment Variables"){
+            environment {
+                DESK = "Reusmana Sujani"
+            }
+            steps {
+                echo "Environment Variables"
+                echo "NODE_ENV: ${env.NODE_ENV}"
+                echo "AUTHOR: ${env.AUTHOR}"
+                echo "DESK: ${env.DESK}"
             }
         }
     }
