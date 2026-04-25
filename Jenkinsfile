@@ -10,6 +10,15 @@ pipeline {
         // DESK = "Jenkins Pipeline"
     }
     stages {
+        stage("Initialization") {
+            environment {
+                INIT_VAR = "Initialization Stage"
+                APP = credentials("reussujani")    
+            }
+            steps {
+                echo "Initializing Jenkins Pipeline"
+            }
+        }
         stage("Builds") {
             steps {
                 echo "Testing Jenkins Pipeline Builds"
@@ -68,6 +77,13 @@ pipeline {
                 echo ("NODE_ENV: ${NODE_ENV}")
                 echo ("AUTHOR: ${AUTHOR}")
                 echo ("DESK: ${DESK}")
+            }
+        }
+        stage("Test Credentials"){
+            steps {
+                echo "Testing Credentials"
+                echo ("Username: ${APP_USR}")
+                echo ("Password: ${APP_PSW}")
             }
         }
     }
