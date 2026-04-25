@@ -45,6 +45,39 @@ pipeline {
                 }
             }
         }
+        stage("Matrix"){
+            stages {
+                stage("Build & Test"){
+                    matrix {
+                        axes {
+                            axis {
+                                name 'NODE_VER'
+                                values '18', '20'
+                            }
+                            axis {
+                                name 'ENV_TYPE'
+                                values 'staging', 'production'
+                            }
+                        }
+                        exclude {
+                            axis {
+                                name 'NODE_VER'
+                                value '18'
+                            }
+                            axis {
+                                name 'ENV_TYPE'
+                                value 'production'
+                            }
+                        }
+                        steps {
+                            echo "Testing Jenkins Pipeline Matrix Build & Test"
+                            echo ("NODE_VER: ${NODE_VER}")
+                            echo ("ENV_TYPE: ${ENV_TYPE}")
+                        }
+                    }
+                }
+            }
+        }
         // stage("Prepare") {
         //     stages { // Nested stages, ketika sudah ada stages di dalam stage, tidak bisa di gabung dengan steps, harus di buat stage lagi
         //         stage("Build"){
