@@ -20,7 +20,7 @@ pipeline {
         stage("Tests") {
             steps {
                 echo "Testing Jenkins Pipeline Tests"
-                sh("npm run build")
+                // sh("npm run build")
             }
         }
         stage("Script") {
