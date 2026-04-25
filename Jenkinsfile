@@ -84,6 +84,20 @@ pipeline {
                 }
             }
         }
+        stage("release"){
+            stages {
+                stage("Cek with credential"){
+                    steps {
+                        withCredentials([usernamePassword(credentialsId:'reusmana', usernameVariable:'USERNAME',passwordVariable:'PASSWORD')]){
+                            echo "Testing Jenkins Pipeline Cek with credential"
+                            echo ("USERNAME: ${USERNAME}")
+                            echo ("PASSWORD: ${PASSWORD}")
+                            sh("echo 'PASSWORD RELEASE IS ${PASSWORD}' > release_password.txt") // untuk melihat di console log, tapi tidak akan menampilkan password
+                        }
+                    }
+                }
+            }
+        }
         // stage("Prepare") {
         //     stages { // Nested stages, ketika sudah ada stages di dalam stage, tidak bisa di gabung dengan steps, harus di buat stage lagi
         //         stage("Build"){
