@@ -18,8 +18,8 @@ pipeline {
             steps {
                 echo "Initializing Jenkins Pipeline"
                 echo "Testing Credentials"
-                echo ("Username: ${APP.APP_USR}")
-                echo ("Password: ${APP.APP_PSW}")
+                echo ("Username: ${APP_USR}")
+                echo ("Password: ${APP_PSW}")
             }
         }
         stage("Builds") {
