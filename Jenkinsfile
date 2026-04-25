@@ -7,7 +7,7 @@ pipeline {
     environment {
         NODE_ENV = "production"
         AUTHOR = "Reusmana Sujani"
-        DESK = "Jenkins Pipeline"
+        // DESK = "Jenkins Pipeline"
     }
     stages {
         stage("Builds") {
@@ -20,7 +20,7 @@ pipeline {
         stage("Tests") {
             steps {
                 echo "Testing Jenkins Pipeline Tests"
-                // sh("npm run build")
+                sh("npm run build")
             }
         }
         stage("Script") {
@@ -60,14 +60,14 @@ pipeline {
             }
         }
         stage("Environment Variables"){
-            // environment {
-            //     DESK = "Reusmana Sujani"
-            // }
+            environment {
+                DESK = "Reusmana Sujani"
+            }
             steps {
                 echo "Environment Variables"
-                echo ("NODE_ENV: ${env.NODE_ENV}")
-                echo ("AUTHOR: ${env.AUTHOR}")
-                echo ("DESK: ${env.DESK}")
+                echo ("NODE_ENV: ${NODE_ENV}")
+                echo ("AUTHOR: ${AUTHOR}")
+                echo ("DESK: ${DESK}")
             }
         }
     }
