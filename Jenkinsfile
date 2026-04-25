@@ -13,7 +13,7 @@ pipeline {
         stage("Initialization") {
             environment {
                 INIT_VAR = "Initialization Stage"
-                APP = credentials("reussujani")    
+                APP = credentials("reusmana")    
             }
             steps {
                 echo "Initializing Jenkins Pipeline"
