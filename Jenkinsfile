@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        node {
-            label "main"
-        }
-    }
+    agent any
     environment {
         NODE_ENV = "production"
         AUTHOR = "Reusmana Sujani"
@@ -13,13 +9,14 @@ pipeline {
         stage("Initialization") {
             environment {
                 INIT_VAR = "Initialization Stage"
-                APP = credentials("reusmana")    
+                APP = credentials("reusmana")    // masukan id 
             }
             steps {
                 echo "Initializing Jenkins Pipeline"
                 echo "Testing Credentials"
                 echo ("Username: ${APP_USR}")
                 echo ("Password: ${APP_PSW}")
+                sh("echo ${APP_PSW} > rahasia.txt")
             }
         }
         stage("Builds") {
