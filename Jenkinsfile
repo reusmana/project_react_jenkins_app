@@ -1,6 +1,9 @@
 pipeline {
-    agent any
-    
+    agent {
+        node {
+            label 'macos'
+        }
+    }
     parameters {
         booleanParam(name: 'DEPLOY_NOW', defaultValue: true, description: 'This is a boolean parameter')
     }
