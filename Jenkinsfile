@@ -6,8 +6,8 @@ pipeline {
         // DESK = "Jenkins Pipeline"
     }
     options {
-        disableConcurrentBuilds() // mencegah build concurrent
-        timeout(time: 10, unit: 'SECONDS') // mencegah build berjalan terlalu lama, max 10 detik, jika lebih dari itu maka build akan dihentikan
+        disableConcurrentBuilds() // mencegah build concurrent // mencegah job berjalan bersamaan, jika ada job yang sedang berjalan maka job selanjutnya akan menunggu hingga job pertama selesai
+        timeout(time: 5, unit: 'SECONDS') // mencegah build berjalan terlalu lama, max 10 detik, jika lebih dari itu maka build akan dihentikan
         // retry(2)
         // timestamps()
     }
