@@ -66,9 +66,9 @@ pipeline {
             }
             steps {
                 echo "Environment Variables"
-                echo "NODE_ENV: ${env.NODE_ENV}"
-                echo "AUTHOR: ${env.AUTHOR}"
-                echo "DESK: ${env.DESK}"
+                echo ("NODE_ENV: ${env.NODE_ENV}")
+                echo ("AUTHOR: ${env.AUTHOR}")
+                echo ("DESK: ${env.DESK}")
             }
         }
     }
