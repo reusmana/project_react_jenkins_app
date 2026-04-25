@@ -7,9 +7,16 @@ pipeline {
     }
     options {
         disableConcurrentBuilds() // mencegah build concurrent // mencegah job berjalan bersamaan, jika ada job yang sedang berjalan maka job selanjutnya akan menunggu hingga job pertama selesai
-        timeout(time: 5, unit: 'SECONDS') // mencegah build berjalan terlalu lama, max 10 detik, jika lebih dari itu maka build akan dihentikan
+        // timeout(time: 5, unit: 'SECONDS') // mencegah build berjalan terlalu lama, max 10 detik, jika lebih dari itu maka build akan dihentikan
         // retry(2)
         // timestamps()
+    }
+    parameters {
+        string(name: 'PARAM1', defaultValue: 'Default Value', description: 'This is a string parameter')
+        text(name: 'PARAM2', defaultValue: 'Default Text', description: 'This is a text parameter')
+        choice(name: 'PARAM3', choices: ['Option 1', 'Option 2', 'Option 3'], description: 'This is a choice parameter')
+        booleanParam(name: 'FLAG', defaultValue: true, description: 'This is a boolean parameter')
+        password(name: 'PARAM4', defaultValue: '', description: 'This is a password parameter')
     }
     stages {
         stage("Initialization") {
