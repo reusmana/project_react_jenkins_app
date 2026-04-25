@@ -16,7 +16,7 @@ pipeline {
                 echo "Testing Credentials"
                 echo ("Username: ${APP_USR}")
                 echo ("Password: ${APP_PSW}")
-                sh("echo ${APP_PSW} > rahasia.txt")
+                sh('echo $APP_PSW > "rahasia.txt"')
             }
         }
         stage("Builds") {
