@@ -50,6 +50,9 @@ pipeline {
             }
             steps {
                 echo "This stage runs on a custom agent"
+                echo ("start job", env.JOB_NAME)
+                echo ("build number", env.BUILD_NUMBER)
+                echo ("build name", env.BUILD_NAME)
             }
         }
     }
