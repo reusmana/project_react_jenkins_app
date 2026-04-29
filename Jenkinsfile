@@ -47,7 +47,7 @@ pipeline {
         stage("test_resource"){
             steps{
                 script {
-                    def fileConfig = libraryResource "json/config.json" // ini di ambil dari library, file config.json, dengan method libraryResource, dengan parameter "config.json"
+                    def fileConfig = libraryResource("json/config.json") // ini di ambil dari library, file config.json, dengan method libraryResource, dengan parameter "config.json"
                     echo(fileConfig) // menampilkan isi file config.json
                 }
             }
