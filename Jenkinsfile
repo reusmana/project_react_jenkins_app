@@ -19,5 +19,16 @@ pipeline {
                 }
             }
         }
+        stage("running_npm_command_via_groovy"){
+            steps {
+                script {
+                    // def command = "npm --version"
+                    // def result = sh(script: command, returnStdout: true).trim()
+                    echo(noderun("npm --version")) // ini di ambil dari library, file noderun.groovy, method noderun, dengan parameter "npm --version"
+                    echo(noderun("npm install")) // ini di ambil dari library, file noderun.groovy, method noderun, dengan parameter "npm install"
+                    echo(noderun("npm run build")) // ini di ambil dari library, file noderun.groovy, method noderun, dengan parameter "npm run build"
+                }
+            }
+        }
     }
 }
