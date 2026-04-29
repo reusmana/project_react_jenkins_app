@@ -30,5 +30,19 @@ pipeline {
                 }
             }
         }
+        stage("list"){
+            steps{
+                script {
+                    hello.arrlist(["jenkins", "pipeline", "library"]) // ini di ambil dari library, file hello.groovy, method arrlist, dengan parameter list ["jenkins", "pipeline", "library"]
+                }
+            }
+        }
+        stage("map_key_value"){
+            steps{
+                script {
+                    hello.map(["name": "reusmana", "age": "27"]) // ini di ambil dari library, file hello.groovy, method map, dengan parameter map ["key1": "value1", "key2": "value2"]
+                }
+            }
+        }
     }
 }
